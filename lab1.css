@@ -1,0 +1,322 @@
+/* ====== VARIABLES ====== */
+:root {
+    --bg: #345556;
+    --white: #ffffff;
+    --light: #eeeeee;
+    --mid: #d9d9d9;
+    --done: #8f8f8f;
+    --red: #a53535;
+    --text: #1d1d1d;
+    --muted: #a9a9a9;
+    --radius: 0px;
+    --shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    --gap: 24px;
+}
+
+/* ====== BASE & RESET ====== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Montserrat", Arial, sans-serif;
+    color: var(--white);
+    background: var(--bg);
+}
+
+/* ====== PAGE LAYOUT WITH BACKGROUND ====== */
+.page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    /* Затемненное фоновое изображение */
+    background-image:
+        linear-gradient(rgba(52, 85, 86, 0.92), rgba(52, 85, 86, 0.92)),
+        url("https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=1600&q=60");
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 900px) {
+    .page {
+        background-position: top;
+    }
+}
+
+/* ====== HEADER ====== */
+.header {
+    padding: 28px 24px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap);
+}
+
+/* Заголовок с иконкой */
+.title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.title__img {
+    width: 54px;
+    height: 54px;
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25));
+    /* Твоя картинка может быть PNG, это тоже сработает */
+}
+
+.title__text {
+    margin: 0;
+    font-family: "Rubik Wet Paint", system-ui;
+    font-size: clamp(44px, 6vw, 86px);
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+    color: white;
+    font-style: normal;
+    /* Убираем italic из твоего прошлого кода */
+}
+
+/* Контролы (поле и кнопки) */
+.controls {
+    width: min(1100px, 100%);
+    display: flex;
+    gap: 0;
+    box-shadow: var(--shadow);
+}
+
+.controls__input {
+    flex: 1;
+    padding: 22px 26px;
+    border: none;
+    outline: none;
+    font-size: 26px;
+    background: var(--white);
+    color: #666;
+}
+
+.controls__input::placeholder {
+    color: lightgray;
+    font-size: 25px;
+    /* Убираем лишние padding, так как они уже есть на самом input */
+}
+
+.controls__buttons {
+    display: flex;
+    width: 560px;
+}
+
+/* Кнопки */
+.btn {
+    border: none;
+    padding: 22px 26px;
+    font-size: 26px;
+    cursor: pointer;
+    width: 50%;
+    transition: transform 0.15s ease, filter 0.15s ease;
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+.btn--gray {
+    background: var(--mid);
+    color: #000;
+}
+
+.btn--red {
+    background: var(--red);
+    color: #000;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.03);
+}
+
+/* Адаптив для контролов */
+@media (max-width: 900px) {
+    .controls {
+        flex-direction: column;
+        gap: 12px;
+        box-shadow: none;
+    }
+
+    .controls__buttons {
+        width: 100%;
+        box-shadow: var(--shadow);
+    }
+
+    .controls__input {
+        box-shadow: var(--shadow);
+    }
+}
+
+/* ====== MAIN (центр + скролл списка) ====== */
+.main {
+    display: grid;
+    place-items: center;
+    padding: 10px 24px 10px;
+}
+
+.list {
+    width: min(950px, 100%);
+}
+
+/* ВАЖНО: скроллится только эта область */
+.list__scroll {
+    background: var(--light);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+
+    /* Высота подстраивается, чтобы header и footer оставались на месте */
+    max-height: calc(100vh - 340px);
+    overflow-y: auto;
+}
+
+/* ====== ITEMS ====== */
+.item {
+    display: grid;
+    grid-template-columns: 90px 1fr 90px;
+    align-items: center;
+    padding: 26px 24px;
+    color: var(--text);
+    background: var(--light);
+    transition: background 0.15s ease;
+}
+
+.item + .item {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.item:hover {
+    background: #cfcfcf;
+}
+
+/* Выполненный элемент */
+.item--done {
+    background: var(--done);
+}
+
+.item--done:hover {
+    background: #7f7f7f;
+}
+
+/* Иконки */
+.item__icon {
+    font-size: 34px;
+    text-align: center;
+    color: #8a8a8a;
+    transition: color 0.15s ease, transform 0.15s ease;
+    cursor: default;
+    /* Поставим курсор, как будто они тоже могут быть интерактивными */
+}
+
+.item:hover .item__icon {
+    color: #111;
+    transform: scale(1.03);
+}
+
+.item--done .item__icon {
+    color: #f0f0f0;
+}
+
+.item--done:hover .item__icon {
+    color: #ffffff;
+}
+
+/* Контент: текст + дата */
+.item__content {
+    min-width: 0;
+    /* Важно для ellipsis */
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.item__label {
+    font-size: 30px;
+    font-weight: 600;
+
+    /* ОДНА СТРОКА + ТРОЕТОЧИЕ */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item__label--done {
+    text-decoration: line-through;
+    color: #f0f0f0;
+}
+
+/* Дата */
+.item__date {
+    font-size: 16px;
+    color: var(--muted);
+}
+
+/* ====== EMPTY STATE ====== */
+.empty {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    font-size: clamp(22px, 3vw, 34px);
+    font-weight: 600;
+}
+
+/* ====== FOOTER ====== */
+.footer {
+    padding: 10px 24px 22px;
+}
+
+.footer__line {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.7);
+    margin-bottom: 14px;
+}
+
+.footer__text {
+    text-align: center;
+    font-size: 30px;
+}
+
+/* ====== Анимации (как бонус) ====== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.item {
+    animation: fadeIn 0.35s ease;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.96);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.title {
+    animation: pop 0.6s ease-out;
+}

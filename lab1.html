@@ -1,21 +1,99 @@
-<html>
-    <head>
-        <title>Список дел блин</title>
-        <link rel="icon" href="png-klev-club-119k-p-smailiki-3d-png-14.png" type="image"
-    </head>
-    <body>
-        <h1>Список дел</h1>
-        <form> 
-            <input type="text" placeholder="Введите дело"/>
-            <button type="reset">Reset</button>
-            <button type="submit">Submit</button>
-        </form>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список дел блин</title>
+    <link rel="icon" href="png-klev-club-119k-p-smailiki-3d-png-14.png" type="image/png">
+    
+    <!-- Шрифты как в примере -->
+     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
 
-        <ol>
-            <li> <input type="checkbox" /> почесать кошку <sup>02.02.26</sup><button> <img src="Без названия (3).png" width="10" height="10"/> </button></li>
-            <li> <input type="checkbox" /> собрать картошку <sup>02.02.26</sup><button> <img src="Без названия (3).png" width="10" height="10"/> </button></li>
-            <li> <input type="checkbox" /> положить в лукошко <sup>02.02.26</sup><button> <img src="Без названия (3).png" width="10" height="10"/> </button></li>
-            <li> <input type="checkbox" /> приготовить окрошку <sup>02.02.26</sup><button> <img src="Без названия (3).png" width="10" height="10"/> </button></li>
-        </ol>
-    </body>
+    <link rel="stylesheet" href="lab1.css">
+</head>
+<body>
+    <div class="page"> <!-- Обертка страницы -->
+
+        <!-- HEADER с заголовком и формой -->
+        <header class="header">
+            <div class="title">
+                <!-- Твоя картинка для заголовка. Если ее нет, раскомментируй строку с favicon.svg -->
+                <!-- <img class="title__img" src="favicon.svg" alt="Иконка" /> -->
+                <h1 class="title__text">Список дел</h1>
+            </div>
+
+            <section class="controls">
+                <!-- Форма больше не нужна, т.к. мы не отправляем данные. Оставим просто элементы -->
+                <!-- <form>  -->
+                    <input class="controls__input" type="text" placeholder="Новый элемент списка" />
+                    <div class="controls__buttons">
+                        <button class="btn btn--gray" type="button">создать</button>
+                        <button class="btn btn--red" type="button">очистить всё</button>
+                    </div>
+                <!-- </form> -->
+            </section>
+        </header>
+
+        <!-- MAIN с прокручиваемым списком -->
+        <main class="main">
+            <section class="list">
+                <div class="list__scroll"> <!-- Этот блок будет скроллиться -->
+                    
+                    <!-- Первый элемент помечен как выполненный (добавлен класс item--done) -->
+                    <div class="item item--done">
+                        <span class="item__icon item__icon--check">✔</span>
+                        <div class="item__content">
+                            <div class="item__label item__label--done">почесать кошку очень-очень длинный текст для проверки</div>
+                            <div class="item__date">от 02.02.26</div>
+                        </div>
+                        <span class="item__icon item__icon--x">✖</span>
+                    </div>
+
+                    <!-- Обычный элемент -->
+                    <div class="item">
+                        <span class="item__icon item__icon--check">✔</span>
+                        <div class="item__content">
+                            <div class="item__label">собрать картошку</div>
+                            <div class="item__date">от 02.02.26</div>
+                        </div>
+                        <span class="item__icon item__icon--x">✖</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item__icon item__icon--check">✔</span>
+                        <div class="item__content">
+                            <div class="item__label">положить в лукошко</div>
+                            <div class="item__date">от 02.02.26</div>
+                        </div>
+                        <span class="item__icon item__icon--x">✖</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item__icon item__icon--check">✔</span>
+                        <div class="item__content">
+                            <div class="item__label">приготовить окрошку</div>
+                            <div class="item__date">от 02.02.26</div>
+                        </div>
+                        <span class="item__icon item__icon--x">✖</span>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Пустое состояние (показано как пример, закомментировано) -->
+            <!-- <div class="empty">Не найдено ни одного дела</div> -->
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer__line"></div>
+            <div class="footer__text">Copyright ©</div>
+        </footer>
+
+    </div> <!-- Закрытие page -->
+</body>
 </html>
