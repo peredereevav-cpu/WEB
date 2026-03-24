@@ -119,7 +119,7 @@ nav {
 .hero {
     height: 100vh;
     background: linear-gradient(135deg, rgba(52, 152, 219, 0.8), rgba(231, 76, 60, 0.8)), 
-                url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600') center/cover;
+                url('tour.jpg') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -275,11 +275,13 @@ nav {
 /* Лучшие предложения */
 .offers {
     padding: 5rem 0;
+    
+    color: white;
 }
 
 .offers-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -319,7 +321,7 @@ nav {
 }
 
 .offer-badge {
-    position: absolute;
+    position:absolute;
     top: 1rem;
     right: 1rem;
     background: #e74c3c;
@@ -331,7 +333,7 @@ nav {
 }
 
 .offer-image {
-    height: 150px;
+    height: 200px;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -783,89 +785,7 @@ footer {
     color: #bdc3c7;
 }
 
-/* Анимации */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-/* Адаптивность */
-@media (max-width: 1024px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    
-    h2 {
-        font-size: 2rem;
-    }
-    
-    .offers-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .tours-grid,
-    .reviews-grid,
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .burger {
-        display: block;
-    }
-    
-    .nav-active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 2rem;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-    
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero-content p {
-        font-size: 1.2rem;
-    }
-    
-    .about-content,
-    .contacts-grid,
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .offers-grid,
-    .tours-grid,
-    .reviews-grid,
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .about-stats {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-item:hover {
-        transform: none;
-    }
-}
 
 .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
