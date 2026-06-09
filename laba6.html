@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная: Массивы и Генераторы</title>
+    <!--link rel="stylesheet" href="laba6.css"-->
+</head>
+<body>
+    <div class="container">
+        <h1>Часть 1. Массивы в JavaScript</h1>
+
+        <section class="task-card">
+            <h2>Задача 1: Обработка массивов</h2>
+            <div class="sub-task">
+                <h3>1.1 Максимальная разница</h3>
+                <input type="text" id="arr1_1" value="[10, 2, 5, 1, 9]" placeholder="Массив чисел">
+                <button onclick="runMaxDiff()">Найти разницу</button>
+                <div id="res1_1" class="result"></div>
+            </div>
+            
+            <div class="sub-task">
+                <h3>1.2 Без повторений</h3>
+                <input type="text" id="arr1_2" value="[1, 1, 2, 3, 3, 4]" placeholder="Массив">
+                <button onclick="runUniqueArr()">Удалить дубликаты</button>
+                <div id="res1_2" class="result"></div>
+            </div>
+
+            <div class="sub-task">
+                <h3>1.3 Фильтр объектов (isDone: true)</h3>
+                <textarea id="arr1_3" rows="3">[{"id": 1, "isDone": true}, {"id": 2, "isDone": false}, {"id": 3, "isDone": true}]</textarea>
+                <button onclick="runFilterObjects()">Отфильтровать</button>
+                <div id="res1_3" class="result"></div>
+            </div>
+        </section>
+
+        <section class="task-card">
+            <h2>Задача 2: Фильтрация и плоские массивы</h2>
+            <div class="sub-task">
+                <h3>2.1 Элементы больше N</h3>
+                <input type="text" id="arr2_1" value="[1, 4, 6, 3, 2]">
+                <input type="number" id="num2_1" value="2" placeholder="Число N">
+                <button onclick="runFilterGreater()">Найти</button>
+                <div id="res2_1" class="result"></div>
+            </div>
+
+            <div class="sub-task">
+                <h3>2.2 Сделать массив плоским</h3>
+                <input type="text" id="arr2_2" value="[1, 4, [34, 1, 20], [6, [6, 12, 8], 6]]">
+                <button onclick="runFlatten()">Сплюснуть</button>
+                <div id="res2_2" class="result"></div>
+            </div>
+        </section>
+
+        <section class="task-card">
+            <h2>Задача 3: Пары и Тройки (сумма 0)</h2>
+            <div class="sub-task">
+                <input type="text" id="arr3" value="[-1, 1, 0, 1]">
+                <button onclick="runPairs()">Пары (сумма 0)</button>
+                <button onclick="runTriplets()">Тройки (сумма 0)</button>
+                <div id="res3" class="result"></div>
+            </div>
+        </section>
+
+        <h1>Часть 2. Генераторы, Map, Set, Math</h1>
+
+        <section class="task-card">
+            <h2>Задача 1: Генераторы</h2>
+            <div class="sub-task">
+                <h3>Случайное число (n, m)</h3>
+                <input type="number" id="gen_n" value="1" placeholder="n">
+                <input type="number" id="gen_m" value="10" placeholder="m">
+                <button onclick="nextRandom()">Следующее случайное</button>
+                <span id="res_gen1" class="gen-result">-</span>
+            </div>
+
+            <div class="sub-task">
+                <h3>Последовательность Падована</h3>
+                <button onclick="nextPadovan()">Следующее число</button>
+                <span id="res_gen2" class="gen-result">-</span>
+            </div>
+
+            <div class="sub-task">
+                <h3>Простые числа</h3>
+                <button onclick="nextPrimeGen()">Следующее простое</button>
+                <span id="res_gen3" class="gen-result">-</span>
+            </div>
+        </section>
+
+        <section class="task-card">
+            <h2>Задача 2: Map и BigInt</h2>
+            <div class="sub-task">
+                <h3>Подсчет символов (Map)</h3>
+                <input type="text" id="str_map" value="hello world">
+                <button onclick="runMapCount()">Посчитать</button>
+                <div id="res_map" class="result"></div>
+            </div>
+
+            <div class="sub-task">
+                <h3>N-ное простое число (BigInt)</h3>
+                <input type="number" id="num_prime" value="10" placeholder="N">
+                <button onclick="runGetPrimeBigInt()">Найти</button>
+                <div id="res_bigint" class="result"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="laba6.js"></script>
+</body>
+</html>
