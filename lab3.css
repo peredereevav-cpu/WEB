@@ -1,4 +1,4 @@
-/* Общие стили */
+/* ========== ОБЩИЕ СТИЛИ ========== */
 * {
     margin: 0;
     padding: 0;
@@ -11,9 +11,10 @@ html {
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
+    color: #5c2e3a;
     line-height: 1.6;
     overflow-x: hidden;
+    background-color: #fff5f7;
 }
 
 .container {
@@ -31,7 +32,7 @@ h2 {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
-    color: #2c3e50;
+    color: #b34a60;
     position: relative;
 }
 
@@ -40,12 +41,12 @@ h2::after {
     display: block;
     width: 60px;
     height: 4px;
-    background: linear-gradient(90deg, #3498db, #e74c3c);
+    background: linear-gradient(90deg, #f0a0b0, #e75472);
     margin: 1rem auto;
     border-radius: 2px;
 }
 
-/* Навигация */
+/* ========== НАВИГАЦИЯ ========== */
 nav {
     position: fixed;
     top: 0;
@@ -54,16 +55,16 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 245, 248, 0.95);
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 20px rgba(180, 70, 90, 0.1);
     z-index: 1000;
 }
 
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    background: linear-gradient(135deg, #3498db, #e74c3c);
+    background: linear-gradient(135deg, #d47088, #e75472);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -77,7 +78,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #2c3e50;
+    color: #7a4550;
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
@@ -90,12 +91,12 @@ nav {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #3498db, #e74c3c);
+    background: linear-gradient(90deg, #f0a0b0, #e75472);
     transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #e74c3c;
+    color: #c94a62;
 }
 
 .nav-links a:hover::after {
@@ -110,21 +111,21 @@ nav {
 .burger div {
     width: 25px;
     height: 3px;
-    background: #2c3e50;
+    background: #7a4550;
     margin: 5px;
     transition: all 0.3s ease;
 }
 
-/* Hero секция */
+/* ========== HERO СЕКЦИЯ ========== */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, rgba(52, 152, 219, 0.8), rgba(231, 76, 60, 0.8)), 
-                url('tour.jpg') center/cover;
+    background: linear-gradient(135deg, rgba(230, 140, 160, 0.8), rgba(210, 80, 110, 0.8)), 
+                url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&h=1080&fit=crop') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     margin-top: 60px;
 }
 
@@ -137,41 +138,41 @@ nav {
 .hero-content h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(90, 20, 40, 0.3);
 }
 
 .hero-content p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 2px rgba(90, 20, 40, 0.3);
 }
 
-/* Кнопки */
+/* ========== КНОПКИ ========== */
 .btn-primary {
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
-    background: white;
-    color: #e74c3c;
+    background: rgb(255, 255, 255);
+    color: #c94a62;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(180, 70, 90, 0.2);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    background: #e74c3c;
-    color: white;
+    box-shadow: 0 6px 20px rgba(180, 70, 90, 0.3);
+    background: #d47088;
+    color: rgb(255, 255, 255);
 }
 
 .btn-secondary {
     padding: 0.8rem 2rem;
     background: transparent;
-    color: #3498db;
-    border: 2px solid #3498db;
+    color: #c07080;
+    border: 2px solid #d4909e;
     border-radius: 50px;
     cursor: pointer;
     font-weight: 600;
@@ -179,29 +180,13 @@ nav {
 }
 
 .btn-secondary:hover {
-    background: #3498db;
+    background: #d4909e;
     color: white;
-}
-
-.btn-details {
-    padding: 0.5rem 1.5rem;
-    background: #3498db;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.btn-details:hover {
-    background: #2980b9;
-    transform: scale(1.05);
 }
 
 .btn-book {
     padding: 0.5rem 1.5rem;
-    background: #e74c3c;
+    background: #d28090;
     color: white;
     border: none;
     border-radius: 25px;
@@ -211,14 +196,14 @@ nav {
 }
 
 .btn-book:hover {
-    background: #c0392b;
+    background: #c07080;
     transform: scale(1.05);
 }
 
-/* О нас */
+/* ========== О НАС ========== */
 .about {
     padding: 5rem 0;
-    background: #f9f9f9;
+    background: #fff0f3;
 }
 
 .about-content {
@@ -230,13 +215,13 @@ nav {
 
 .about-text h3 {
     font-size: 1.8rem;
-    color: #2c3e50;
+    color: #7a3545;
     margin-bottom: 1.5rem;
 }
 
 .about-text p {
     margin-bottom: 1.5rem;
-    color: #666;
+    color: #7a5a62;
     line-height: 1.8;
 }
 
@@ -251,7 +236,7 @@ nav {
     padding: 2rem;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(180, 70, 90, 0.08);
     transition: transform 0.3s ease;
 }
 
@@ -263,122 +248,19 @@ nav {
     display: block;
     font-size: 2.5rem;
     font-weight: bold;
-    color: #e74c3c;
+    color: #c94a62;
     margin-bottom: 0.5rem;
 }
 
 .stat-label {
-    color: #666;
+    color: #8a6a72;
     font-size: 1rem;
 }
 
-/* Лучшие предложения */
+/* ========== ПРЕДЛОЖЕНИЯ ========== */
 .offers {
     padding: 5rem 0;
-    
-    color: white;
-}
-
-.offers-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.offer-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    position: relative;
-    padding: 1.5rem;
-}
-
-.offer-card.active {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-}
-
-.offer-card.active h3,
-.offer-card.active p,
-.offer-card.active .offer-price {
-    color: white;
-}
-
-.offer-card.active .btn-details {
-    background: white;
-    color: #764ba2;
-}
-
-.offer-card.active .btn-details:hover {
-    background: #f0f0f0;
-}
-
-.offer-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.offer-badge {
-    position:absolute;
-    top: 1rem;
-    right: 1rem;
-    background: #e74c3c;
-    color: white;
-    padding: 0.3rem 1rem;
-    border-radius: 25px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.offer-image {
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-}
-
-.offer-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    color: #2c3e50;
-}
-
-.offer-card h4 {
-    font-size: 1.1rem;
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
-}
-
-.offer-card p {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-.offer-price {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #e74c3c;
-    margin: 1rem 0;
-}
-
-/* Туры */
-.tours {
-    padding: 5rem 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-}
-
-.tours h2 {
-    color: white;
-}
-
-.tours h2::after {
-    background: white;
+    background: #ffeef2;
 }
 
 .tours-grid {
@@ -391,12 +273,13 @@ nav {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 20px rgba(180, 70, 90, 0.08);
     transition: all 0.3s ease;
 }
 
 .tour-card:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(180, 70, 90, 0.15);
 }
 
 .tour-image {
@@ -407,17 +290,23 @@ nav {
 
 .tour-content {
     padding: 1.5rem;
-    color: #333;
+    color: #5c2e3a;
 }
 
 .tour-content h3 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: #2c3e50;
+    color: #7a3545;
+}
+
+.tour-content h4 {
+    font-size: 1.1rem;
+    color: #7a3545;
+    margin-bottom: 0.5rem;
 }
 
 .tour-content p {
-    color: #666;
+    color: #7a5a62;
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
@@ -431,13 +320,34 @@ nav {
 .tour-price {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #e74c3c;
+    color: #c94a62;
 }
 
-/* Отзывы */
+/* ========== ТУРЫ ========== */
+.tours {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #e890a0 0%, #c9607a 100%);
+    color: white;
+}
+
+.tours h2 {
+    color: white;
+}
+
+.tours h2::after {
+    background: white;
+}
+
+.tours .tours-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* ========== ОТЗЫВЫ ========== */
 .reviews {
     padding: 5rem 0;
-    background: #f9f9f9;
+    background: #fff0f3;
 }
 
 .reviews-grid {
@@ -450,13 +360,13 @@ nav {
     background: white;
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(180, 70, 90, 0.08);
     transition: all 0.3s ease;
 }
 
 .review-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(180, 70, 90, 0.12);
 }
 
 .review-header {
@@ -468,61 +378,236 @@ nav {
 
 .review-header i {
     font-size: 3rem;
-    color: #3498db;
+    color: #e890a0;
 }
 
 .review-header h4 {
     font-size: 1.1rem;
-    color: #2c3e50;
+    color: #7a3545;
     margin-bottom: 0.2rem;
 }
 
 .review-header p {
-    color: #999;
+    color: #9a7a82;
     font-size: 0.9rem;
 }
 
 .review-text {
-    color: #666;
+    color: #7a5a62;
     line-height: 1.8;
     margin-bottom: 1rem;
     font-style: italic;
 }
 
 .rating {
-    color: #f1c40f;
+    color: #f0a0b0;
     font-size: 1.2rem;
 }
 
-/* Галерея */
+/* ========== ГАЛЕРЕЯ С CSS-КАРУСЕЛЬЮ ========== */
 .gallery {
     padding: 5rem 0;
+    background: #fff5f7;
 }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(180, 70, 90, 0.25);
 }
 
-.gallery-item {
-    height: 250px;
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
-    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.slide-caption {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: white;
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Кнопки карусели */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
     cursor: pointer;
+    font-size: 1.5rem;
+    color: #c94a62;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+    z-index: 10;
+    backdrop-filter: blur(5px);
 }
 
-.gallery-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+.carousel:hover .carousel-btn {
+    opacity: 1;
 }
 
-/* FAQ */
+.carousel-btn:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn.prev {
+    left: 20px;
+}
+
+.carousel-btn.next {
+    right: 20px;
+}
+
+/* Точки-индикаторы */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* ========== КАРТА (LEAFLET) ========== */
+.map-section {
+    padding: 5rem 0;
+    background: #fff0f3;
+}
+
+.continent-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.continent-btn {
+    background: #e890a0;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.continent-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(180, 70, 90, 0.4);
+}
+
+.continent-btn:active {
+    transform: scale(0.95);
+}
+
+#leaflet-map {
+    height: 500px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(180, 70, 90, 0.25);
+    transition: box-shadow 0.3s ease;
+}
+
+#leaflet-map:hover {
+    box-shadow: 0 20px 50px rgba(180, 70, 90, 0.35);
+}
+
+.region-info {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #fff0f3;
+    border-radius: 10px;
+    text-align: center;
+    color: #7a3545;
+    font-weight: 500;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Стили для Leaflet popup */
+.leaflet-popup-content-wrapper {
+    border-radius: 12px;
+    background: white;
+    color: #5c2e3a;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-popup-tip {
+    background: white;
+}
+
+.leaflet-popup-content {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #5c2e3a;
+}
+
+/* ========== FAQ ========== */
 .faq {
     padding: 5rem 0;
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #f0c0d0 0%, #e88098 100%);
     color: white;
 }
 
@@ -540,7 +625,7 @@ nav {
 }
 
 .faq-item {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border-radius: 10px;
     margin-bottom: 1rem;
@@ -583,12 +668,13 @@ nav {
 }
 
 .faq-answer p {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
 }
 
-/* Контакты */
+/* ========== КОНТАКТЫ ========== */
 .contacts {
     padding: 5rem 0;
+    background: #fff5f7;
 }
 
 .contacts-grid {
@@ -599,7 +685,7 @@ nav {
 
 .contact-info h3 {
     font-size: 1.8rem;
-    color: #2c3e50;
+    color: #7a3545;
     margin-bottom: 2rem;
 }
 
@@ -608,42 +694,42 @@ nav {
     gap: 1rem;
     margin-bottom: 1.5rem;
     padding: 1rem;
-    background: #f9f9f9;
+    background: #fff0f3;
     border-radius: 10px;
     transition: all 0.3s ease;
 }
 
 .contact-item:hover {
     transform: translateX(10px);
-    background: #f0f0f0;
+    background: #ffe0e5;
 }
 
 .contact-item i {
     font-size: 1.5rem;
-    color: #e74c3c;
+    color: #d47088;
     min-width: 2rem;
 }
 
 .contact-item h4 {
     font-size: 1rem;
-    color: #2c3e50;
+    color: #7a3545;
     margin-bottom: 0.2rem;
 }
 
 .contact-item p {
-    color: #666;
+    color: #7a5a62;
 }
 
 .contact-form {
     background: white;
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 30px rgba(180, 70, 90, 0.08);
 }
 
 .contact-form h3 {
     font-size: 1.5rem;
-    color: #2c3e50;
+    color: #7a3545;
     margin-bottom: 1.5rem;
 }
 
@@ -653,29 +739,30 @@ nav {
     width: 100%;
     padding: 0.8rem;
     margin-bottom: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid #f0c0d0;
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
+    background: #fffafa;
 }
 
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #3498db;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    border-color: #d4909e;
+    box-shadow: 0 0 0 3px rgba(212, 144, 158, 0.15);
 }
 
 .contact-form .btn-primary {
     width: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #e890a0 0%, #c9607a 100%);
     color: white;
 }
 
-/* Footer */
+/* ========== FOOTER ========== */
 footer {
-    background: #2c3e50;
+    background: #5c2e3a;
     color: white;
     padding: 3rem 0 1rem;
 }
@@ -701,11 +788,11 @@ footer {
     left: 0;
     width: 50px;
     height: 2px;
-    background: #e74c3c;
+    background: #f0a0b0;
 }
 
 .footer-section p {
-    color: #bdc3c7;
+    color: #d4b8c0;
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -719,13 +806,13 @@ footer {
 }
 
 .footer-section ul a {
-    color: #bdc3c7;
+    color: #d4b8c0;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-section ul a:hover {
-    color: #e74c3c;
+    color: #f0a0b0;
     padding-left: 5px;
 }
 
@@ -748,7 +835,7 @@ footer {
 }
 
 .social-links a:hover {
-    background: #e74c3c;
+    background: #e88098;
     transform: translateY(-3px);
 }
 
@@ -766,7 +853,7 @@ footer {
 
 .subscribe-form button {
     padding: 0.5rem 1rem;
-    background: #e74c3c;
+    background: #e88098;
     color: white;
     border: none;
     border-radius: 5px;
@@ -775,18 +862,57 @@ footer {
 }
 
 .subscribe-form button:hover {
-    background: #c0392b;
+    background: #d47088;
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: #bdc3c7;
+    color: #d4b8c0;
 }
 
+/* ========== АНИМАЦИИ ========== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+@keyframes pulseCircle {
+    0% {
+        stroke-width: 1;
+        opacity: 0.5;
+    }
+    50% {
+        stroke-width: 5;
+        opacity: 1;
+    }
+    100% {
+        stroke-width: 3;
+        opacity: 0.8;
+    }
+}
 
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+/* Анимация бургера */
 .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -797,4 +923,75 @@ footer {
 
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ========== АДАПТИВНЫЙ ДИЗАЙН ========== */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 70px;
+        background: white;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0;
+        display: none;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .about-content,
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .tours-grid,
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .carousel {
+        height: 300px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    #leaflet-map {
+        height: 350px !important;
+    }
+
+    .continent-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
 }
